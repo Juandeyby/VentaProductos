@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Hello App Engine</title>
+    <title>VentasProductos</title>
     <link rel="stylesheet" type="text/css" href="/css/first.css">
     <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
   </head>

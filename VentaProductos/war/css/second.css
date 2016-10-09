@@ -1,0 +1,48 @@
+/*
+	Author : Juandeyby
+	EPIS-UNSA
+*/
+@CHARSET "UTF-8";
+body {
+	background-color: white;
+}
+
+#pag {
+	margin-top : 30px;
+	margin-left : auto;
+	margin-right : auto;
+	width : 1000px;
+	background-color: #44b2ea;
+	border-style: solid;
+    border-color: #2a779e;
+    border-radius: 5px;
+}
+
+#menu {
+	width : 200px;
+	height : 500px;
+	background-color: #0b4687;
+    border-color: #2a779e;
+}
+
+.sub_menu {
+	color : white;
+	padding-top : 20px;
+	margin-left : 15px;
+	font-family : Courier New;
+	font-size : 20px;
+	font-weight: 700;
+}
+
+.sub_sub_menu {
+	color : white;
+	margin-left : 30px;
+	font-family : Courier New;
+	font-size : 15px;
+}
+
+.sub_sub_menu:hover {
+	cursor : default;
+    background-color: #44b2ea;
+    color : #0b4687;
+}
