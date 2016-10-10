@@ -15,7 +15,7 @@
 			<div class="sub_menu">✠ USUARIO</div>
 			<div class="sub_sub_menu" id="admin_user_registrar">- REGISTRAR</div>
 			<div class="sub_sub_menu" id="admin_user_modificar">- MODIFICAR</div>
-			<div class="sub_sub_menu">- BORRAR</div>
+			<div class="sub_sub_menu" id="admin_user_borrar">- BORRAR</div>
 			<div class="sub_menu">✠ PRODUCTO</div>
 			<div class="sub_sub_menu">- REGISTRAR</div>
 			<div class="sub_sub_menu">- LISTA</div>

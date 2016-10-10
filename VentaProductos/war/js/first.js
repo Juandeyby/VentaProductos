@@ -30,3 +30,18 @@ $(document).ready(function() {
 	});
 });
 
+$(document).ready(function() {
+	$('#admin_user_borrar').click(function() {
+		$.ajax({
+			url : 'redireccionar',
+			data : {
+				redireccionar : 'admin_user_borrar'
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+});
+
+

@@ -22,6 +22,10 @@ public class Redireccionar extends HttpServlet {
 		case "admin_user_modificar":
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_user_modificar.jsp");
 			break;
+		
+		case "admin_user_borrar":
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_user_borrar.jsp");
+			break;
 			
 		default:
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_no_disponible.jsp");

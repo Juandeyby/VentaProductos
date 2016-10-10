@@ -15,14 +15,14 @@
 		<div id="modificar_usuario">
 			<div class="label">DNI</div>
 			<input class="caja" id="dni" type="number">
-			<div class="label">------------------------------------</div>
+			<div class="label">---------------------------------------</div>
 			<div class="label">NOMBRES</div>
 			<input class="caja" id="nombres" type="text">
 			<div class="label">APELLIDOS</div>
 			<input class="caja" id="apellidos" type="text">
 			<div class="label">CONTRASEÑA</div>
-			<input class="caja" id="contrasena" type="password"></br>
-			<button id="modificar">MODIFICAR USUARIO</button>
+			<input class="caja" id="contrasena" type="password"><br>
+			<button id="modificar_usuario_accion">MODIFICAR USUARIO</button>
 		</div>
 	</div>
 </body>

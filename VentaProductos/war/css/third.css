@@ -19,7 +19,7 @@ body {
 	font-size : 30px;
 }
 
-#registrar_usuario, #modificar_usuario {
+#registrar_usuario, #modificar_usuario, #borrar_usuario {
 	margin-top : 30px;
 	margin-left : 30px;
 }
@@ -34,7 +34,7 @@ body {
 	margin-bottom : 10px;
 }
 
-#registrar, #modificar {
+#registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion {
 	size : 200 px;
 	font-family : Courier New;
 	font-size : 20px;
