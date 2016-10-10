@@ -11,18 +11,18 @@ body {
 	margin-top : 30px;
 	margin-left : auto;
 	margin-right : auto;
-	width : 1000px;
-	background-color: #44b2ea;
 	border-style: solid;
     border-color: #2a779e;
     border-radius: 5px;
+    width : 1000px;
+    height : 500px;
 }
 
 #menu {
+	float : left;
 	width : 200px;
 	height : 500px;
 	background-color: #0b4687;
-    border-color: #2a779e;
 }
 
 .sub_menu {
@@ -35,6 +35,8 @@ body {
 }
 
 .sub_sub_menu {
+	padding-top : 5px;
+	padding-bottom : 5px;
 	color : white;
 	margin-left : 30px;
 	font-family : Courier New;
@@ -45,4 +47,18 @@ body {
 	cursor : default;
     background-color: #44b2ea;
     color : #0b4687;
+}
+
+#principal {
+	float : left;
+	width : 800px;
+	height : 500px;
+	background-color: #44b2ea;
+}
+
+#bienvenido {
+	padding-top : 30px;
+	margin-left : 30px;
+	font-family : Courier New;
+	font-size : 30px;
 }

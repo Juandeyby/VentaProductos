@@ -7,20 +7,24 @@
     <title>Administrador</title>
     <link rel="stylesheet" type="text/css" href="/css/second.css">
     <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/first.js"></script>
 </head>
 <body>
 	<div id="pag">
 		<div id="menu">
 			<div class="sub_menu">✠ USUARIO</div>
-			<div class="sub_sub_menu">REGISTRAR</div>
-			<div class="sub_sub_menu">MODIFICAR</div>
-			<div class="sub_sub_menu">BORRAR</div>
+			<div class="sub_sub_menu" id="admin_user_registrar">- REGISTRAR</div>
+			<div class="sub_sub_menu" id="admin_user_modificar">- MODIFICAR</div>
+			<div class="sub_sub_menu">- BORRAR</div>
 			<div class="sub_menu">✠ PRODUCTO</div>
-			<div class="sub_sub_menu">REGISTRAR</div>
-			<div class="sub_sub_menu">LISTA</div>
-			<div class="sub_sub_menu">STOCK</div>
+			<div class="sub_sub_menu">- REGISTRAR</div>
+			<div class="sub_sub_menu">- LISTA</div>
+			<div class="sub_sub_menu">- STOCK</div>
 			<div class="sub_menu">✠ VENTAS</div>
-			<div class="sub_sub_menu">HISTORIAL</div>
+			<div class="sub_sub_menu">- HISTORIAL</div>
+		</div>
+		<div id="principal">
+			<div id="bienvenido">✠ BIENVENIDO ADMINISTRADOR ... 20%</div>
 		</div>
 	</div>
 </body>
