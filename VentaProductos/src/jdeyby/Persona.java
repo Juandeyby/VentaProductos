@@ -1,7 +1,5 @@
 package jdeyby;
 
-import java.security.Key;
-
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
@@ -11,7 +9,10 @@ import javax.jdo.annotations.PrimaryKey;
 public class Persona {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	private Key key;
+	private String usuario;
+	
+	@Persistent
+	private String contrasena;
 	
 	@Persistent
 	private String nombres;
@@ -23,16 +24,24 @@ public class Persona {
 	private String dni;
 	
 	@Persistent
-	private String contrasena;
-	
-	@Persistent
 	private boolean administrador;
-
-	public Persona(String nombres, String apellidos, String dni,
-			String contrasena) {
+	
+	public Persona(String usuario, String contrasena, String nombres,
+			String apellidos, String dni, boolean administrador) {
+		super();
+		this.usuario = usuario;
+		this.contrasena = contrasena;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.dni = dni;
+		this.administrador = administrador;
+	}
+
+	public String getContrasena() {
+		return contrasena;
+	}
+
+	public void setContrasena(String contrasena) {
 		this.contrasena = contrasena;
 	}
 
@@ -60,14 +69,6 @@ public class Persona {
 		this.dni = dni;
 	}
 
-	public String getContrasena() {
-		return contrasena;
-	}
-
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
-	}
-	
 	public boolean isAdministrador() {
 		return administrador;
 	}
@@ -76,10 +77,14 @@ public class Persona {
 		this.administrador = administrador;
 	}
 
+	public String getUsuario() {
+		return usuario;
+	}
+
 	@Override
 	public String toString() {
-		return "Persona [key=" + key + ", nombres=" + nombres + ", apellidos="
-				+ apellidos + ", dni=" + dni + ", contrasena=" + contrasena
-				+ ", administrador=" + administrador + "]";
+		return "Persona [usuario=" + usuario + ", contrasena=" + contrasena
+				+ ", nombres=" + nombres + ", apellidos=" + apellidos
+				+ ", dni=" + dni + ", administrador=" + administrador + "]";
 	}
 }

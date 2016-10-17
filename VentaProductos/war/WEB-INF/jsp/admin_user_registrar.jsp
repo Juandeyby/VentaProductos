@@ -14,14 +14,16 @@
 		<div class="sub_titulo">✠ REGISTRAR USUARIO</div>
 		<div id="registrar_usuario">
 			<div class="label">NOMBRES</div>
-			<input class="caja" id="nombres" type="text">
+			<input class="caja" name="nombres" type="text">
 			<div class="label">APELLIDOS</div>
-			<input class="caja" id="apellidos" type="text">
+			<input class="caja" name="apellidos" type="text">
 			<div class="label">DNI</div>
-			<input class="caja" id="dni" type="number">
+			<input class="caja" name="dni" type="number"></br>
+			<div class="label">USUARIO</div>
+			<input class="caja" name="usuario" type="text">
 			<div class="label">CONTRASEÑA</div>
-			<input class="caja" id="contrasena" type="password"></br>
-			<button id="registrar_usuario_accion">REGISTRAR USUARIO</button>
+			<input class="caja" name="contrasena" type="password"></br>
+			<div id="registrar_usuario_accion">REGISTRAR USUARIO</div>
 		</div>
 	</div>
 </body>

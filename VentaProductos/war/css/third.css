@@ -35,7 +35,17 @@ body {
 }
 
 #registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion {
+	border : 5px;
+	width : 250px;
 	size : 200 px;
+	text-align : center;
 	font-family : Courier New;
 	font-size : 20px;
+	background-color: #2a779e;
+}
+
+#registrar_usuario_accion:hover, #modificar_usuario_accion:hover, #borrar_usuario_accion:hover {
+	cursor : default;
+    background-color: #44b2ea;
+    color : #0b4687;
 }
