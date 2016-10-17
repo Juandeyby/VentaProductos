@@ -21,6 +21,8 @@ public class Registrar_usuario extends HttpServlet {
 		String usuario = req.getParameter("usuario");
 		String contrasena = req.getParameter("contrasena");
 		
+		System.out.println(dni);
+		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		Query q = pm.newQuery(Persona.class);
 		
@@ -30,7 +32,7 @@ public class Registrar_usuario extends HttpServlet {
 		q.declareParameters("String usuarioParam");
 		
 		List<Persona> personas = (List<Persona>) q.execute(usuario);
-		if(personas.size() != 0){
+		if(personas == null || personas.size() != 0){
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_usuario_existente.jsp");
 		}
 		else {

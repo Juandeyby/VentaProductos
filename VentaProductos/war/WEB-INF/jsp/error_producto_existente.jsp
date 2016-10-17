@@ -11,7 +11,7 @@
   <body>
     <div id="error_general">
 		<div><img src="/image/icono-alerta.png"></div>
-		<div id="no_disponible">REGISTRADO EXITOSAMENTE</div>
+		<div id="no_disponible">USUARIO EXISTE</div>
     </div>
   </body>
 </html>

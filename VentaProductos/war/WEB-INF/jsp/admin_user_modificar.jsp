@@ -16,7 +16,7 @@
 			<div class="label">USUARIO *requerido</div>
 			<input class="caja" name="usuario" type="text">
 			<div class="label">---------------------------------------</div>
-			<div class="label">CONTRASEÑA</div>
+			<div class="label">NUEVA CONTRASEÑA</div>
 			<input class="caja" name="contrasena" type="password"><br>
 			<div id="modificar_usuario_accion">MODIFICAR USUARIO</div>
 		</div>

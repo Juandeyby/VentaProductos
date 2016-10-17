@@ -25,7 +25,7 @@ public class Modificar_usuario extends HttpServlet {
 		q.declareParameters("String usuarioParam");
 		
 		List<Persona> personas = (List<Persona>) q.execute(usuario);
-		if(personas.size() != 0){
+		if(personas == null || personas.size() != 0){
 			personas.get(0).setContrasena(contrasena);
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_cambio.jsp");
 		}

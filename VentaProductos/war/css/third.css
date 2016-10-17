@@ -29,12 +29,20 @@ body {
 	font-size : 15px;
 }
 
+#cabezera {
+	font-family : Courier New;
+	font-size : 15px;
+	margin-top : 30px;
+	margin-left : 30px;
+}
+
 .caja {
 	size : 200 px;
 	margin-bottom : 10px;
 }
 
-#registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion {
+#registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion,
+#registrar_producto {
 	border : 5px;
 	width : 250px;
 	size : 200 px;

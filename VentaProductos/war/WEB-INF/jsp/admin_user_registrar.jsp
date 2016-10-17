@@ -18,7 +18,7 @@
 			<div class="label">APELLIDOS</div>
 			<input class="caja" name="apellidos" type="text">
 			<div class="label">DNI</div>
-			<input class="caja" name="dni" type="number"></br>
+			<input class="caja" name="dni" type="text"></br>
 			<div class="label">USUARIO</div>
 			<input class="caja" name="usuario" type="text">
 			<div class="label">CONTRASEÑA</div>

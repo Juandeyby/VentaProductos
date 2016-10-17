@@ -24,7 +24,7 @@ public class Borrar_usuario extends HttpServlet {
 		q.declareParameters("String usuarioParam");
 		
 		List<Persona> personas = (List<Persona>) q.execute(usuario);
-		if(personas.size() != 0){
+		if(personas == null || personas.size() != 0){
 			pm.deletePersistent(personas.get(0));
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_borrar.jsp");
 		}

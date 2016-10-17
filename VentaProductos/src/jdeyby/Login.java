@@ -16,7 +16,6 @@ public class Login extends HttpServlet {
 		String contrasena = req.getParameter("contrasena");
 		
 		if (usuario.equals("admin") && contrasena.equals("admin")) {
-//			HttpSession sesion = req.getSession();
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/pag_admin.jsp");
 		} else {
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/index.jsp");

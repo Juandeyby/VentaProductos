@@ -14,6 +14,19 @@ $(document).ready(function() {
 			}
 		});
 	});
+	
+	$('#admin_user_lista').click(function() {
+		$.ajax({
+			url : 'redireccionar',
+			data : {
+				redireccionar : 'admin_user_lista'
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
 	$('#admin_user_modificar').click(function() {
 		$.ajax({
 			url : 'redireccionar',
@@ -31,6 +44,18 @@ $(document).ready(function() {
 			url : 'redireccionar',
 			data : {
 				redireccionar : 'admin_user_borrar'
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
+	$('#admin_producto_registrar').click(function() {
+		$.ajax({
+			url : 'redireccionar',
+			data : {
+				redireccionar : 'admin_producto_registrar'
 			},
 			success : function(responseText) {
 				$('#principal').html(responseText);
@@ -81,6 +106,26 @@ $(document).ready(function() {
 			url : 'borrar_usuario',
 			data : {
 				usuario : $('input:text[name=usuario]').val(),
+			},
+			beforeSend: function() {
+			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
+	$('#registrar_producto_accion').click(function() {
+		$.ajax({
+			type: 'post',
+			url : 'registrar_producto',
+			data : {
+				codigo : $('input:text[name=codigo]').val(),
+				nombre : $('input:text[name=nombre]').val(),
+				precio_unitario_compra : $('input:text[name=precio_unitario_compra]').val(),
+				precio_unitario_venta : $('input:text[name=precio_unitario_venta]').val(),
+				stock : $('input:text[name=stock]').val()
 			},
 			beforeSend: function() {
 			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');
