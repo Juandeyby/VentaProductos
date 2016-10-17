@@ -4,21 +4,18 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Modificar</title>
+    <title>Borrar</title>
     <link rel="stylesheet" type="text/css" href="/css/third.css">
     <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/js/first.js"></script>
 </head>
 <body>
 	<div class="sub_principal">
-		<div class="sub_titulo">✠ MODIFICAR USUARIO</div>
+		<div class="sub_titulo">✠ BORRAR PRODUCTO</div>
 		<div id="contenido">
-			<div class="label">USUARIO *requerido</div>
-			<input class="caja" name="usuario" type="text">
-			<div class="label">---------------------------------------</div>
-			<div class="label">NUEVA CONTRASEÑA</div>
-			<input class="caja" name="contrasena" type="password"><br>
-			<div id="modificar_usuario_accion">MODIFICAR USUARIO</div>
+			<div class="label">CODIGO DEL PRODUCTO *requerido</div>
+			<input class="caja" name="codigo" type="text"><br>
+			<div id="borrar_producto_accion">BORRAR PRODUCTO</div>
 		</div>
 	</div>
 </body>

@@ -11,7 +11,7 @@
   <body>
     <div id="error_general">
 		<div><img src="/image/icono-alerta.png"></div>
-		<div id="no_disponible">PRODCUCTO EXISTE</div>
+		<div id="no_disponible">AUMENTAR STOCK EXITOSA</div>
     </div>
   </body>
 </html>

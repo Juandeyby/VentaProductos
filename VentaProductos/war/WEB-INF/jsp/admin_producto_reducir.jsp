@@ -11,14 +11,14 @@
 </head>
 <body>
 	<div class="sub_principal">
-		<div class="sub_titulo">✠ MODIFICAR USUARIO</div>
+		<div class="sub_titulo">✠ REDUCIR STOCK DE PRODUCTOS</div>
 		<div id="contenido">
-			<div class="label">USUARIO *requerido</div>
-			<input class="caja" name="usuario" type="text">
+			<div class="label">CODIGO *requerido</div>
+			<input class="caja" name="codigo" type="text">
 			<div class="label">---------------------------------------</div>
-			<div class="label">NUEVA CONTRASEÑA</div>
-			<input class="caja" name="contrasena" type="password"><br>
-			<div id="modificar_usuario_accion">MODIFICAR USUARIO</div>
+			<div class="label">REDUCIR EN</div>
+			<input class="caja" name="stock" type="text"><br>
+			<div id="reducir_producto_accion">REDUCIR CANTIDAD</div>
 		</div>
 	</div>
 </body>

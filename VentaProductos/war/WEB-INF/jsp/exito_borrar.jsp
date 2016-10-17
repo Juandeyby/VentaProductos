@@ -11,7 +11,7 @@
   <body>
     <div id="error_general">
 		<div><img src="/image/icono-alerta.png"></div>
-		<div id="no_disponible">USUARIO ELIMINADO EXITOSA</div>
+		<div id="no_disponible">ELIMINADO EXITOSA</div>
     </div>
   </body>
 </html>

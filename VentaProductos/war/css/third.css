@@ -19,7 +19,7 @@ body {
 	font-size : 30px;
 }
 
-#registrar_usuario, #modificar_usuario, #borrar_usuario {
+.contenido {
 	margin-top : 30px;
 	margin-left : 30px;
 }
@@ -41,8 +41,7 @@ body {
 	margin-bottom : 10px;
 }
 
-#registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion,
-#registrar_producto {
+#registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion {
 	border : 5px;
 	width : 250px;
 	size : 200 px;

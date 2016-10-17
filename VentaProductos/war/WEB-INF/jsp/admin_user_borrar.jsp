@@ -12,7 +12,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ BORRAR USUARIO</div>
-		<div id="borrar_usuario">
+		<div id="contenido">
 			<div class="label">USUARIO *requerido</div>
 			<input class="caja" name="usuario" type="text"><br>
 			<div id="borrar_usuario_accion">BORRAR USUARIO</div>

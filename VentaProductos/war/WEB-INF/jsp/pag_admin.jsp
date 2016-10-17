@@ -19,8 +19,10 @@
 			<div class="sub_sub_menu" id="admin_user_borrar">- BORRAR</div>
 			<div class="sub_menu">✠ PRODUCTO</div>
 			<div class="sub_sub_menu" id="admin_producto_registrar">- REGISTRAR</div>
-			<div class="sub_sub_menu">- LISTA</div>
-			<div class="sub_sub_menu">- STOCK</div>
+			<div class="sub_sub_menu" id="admin_producto_lista">- LISTA</div>
+			<div class="sub_sub_menu" id="admin_producto_borrar">- BORRAR</div>
+			<div class="sub_sub_menu" id="admin_producto_aumentar">- AUMENTAR STOCK</div>
+			<div class="sub_sub_menu" id="admin_producto_reducir">- REDUCIR STOCK</div>
 			<div class="sub_menu">✠ VENTAS</div>
 			<div class="sub_sub_menu">- HISTORIAL</div>
 		</div>

@@ -5,6 +5,30 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
+		<servlet-name>Aumentar_producto</servlet-name>
+		<servlet-class>jdeyby.Aumentar_producto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Aumentar_producto</servlet-name>
+		<url-pattern>/aumentar_producto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Reducir_producto</servlet-name>
+		<servlet-class>jdeyby.Reducir_producto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Reducir_producto</servlet-name>
+		<url-pattern>/reducir_producto</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Borrar_producto</servlet-name>
+		<servlet-class>jdeyby.Borrar_producto</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Borrar_producto</servlet-name>
+		<url-pattern>/borrar_producto</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>Registrar_producto</servlet-name>
 		<servlet-class>jdeyby.Registrar_producto</servlet-class>
 	</servlet>

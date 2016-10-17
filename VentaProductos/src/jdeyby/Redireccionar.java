@@ -25,9 +25,9 @@ public class Redireccionar extends HttpServlet {
 			break;
 			
 		case "admin_user_lista":
-			Query q = pm.newQuery(Persona.class);
+			Query q1 = pm.newQuery(Persona.class);
 			@SuppressWarnings("unchecked")
-			List<Persona> personas = (List<Persona>) q.execute();
+			List<Persona> personas = (List<Persona>) q1.execute();
 			req.setAttribute("personas", personas);
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_user_lista.jsp");
 			break;
@@ -42,6 +42,26 @@ public class Redireccionar extends HttpServlet {
 			
 		case "admin_producto_registrar":
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_producto_registrar.jsp");
+			break;
+			
+		case "admin_producto_lista":
+			Query q2 = pm.newQuery(Producto.class);
+			@SuppressWarnings("unchecked")
+			List<Producto> productos = (List<Producto>) q2.execute();
+			req.setAttribute("productos", productos);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_producto_lista.jsp");
+			break;
+			
+		case "admin_producto_borrar":
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_producto_borrar.jsp");
+			break;
+		
+		case "admin_producto_aumentar":
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_producto_aumentar.jsp");
+			break;
+			
+		case "admin_producto_reducir":
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_producto_reducir.jsp");
 			break;
 			
 		default:

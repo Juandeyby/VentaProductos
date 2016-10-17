@@ -10,31 +10,32 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
 @SuppressWarnings("serial")
-public class Registrar_producto extends HttpServlet {
+public class Reducir_producto extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
 		RequestDispatcher redirigir;
 		String codigo = req.getParameter("codigo");
-		String nombre = req.getParameter("nombre");
-		Double precio_unitario_compra = Double.parseDouble(req.getParameter("precio_unitario_compra"));
-		Double precio_unitario_venta = Double.parseDouble(req.getParameter("precio_unitario_venta"));
 		int stock = Integer.parseInt(req.getParameter("stock"));
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		Query q = pm.newQuery(Producto.class);
-		
-		Producto per = new Producto(codigo, nombre, precio_unitario_compra, precio_unitario_venta, stock);
+
 		q.setFilter("codigo == codigoParam");
 		q.declareParameters("String codigoParam");
 		
 		List<Producto> productos = (List<Producto>) q.execute(codigo);
 		if(productos.size() != 0){
-			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_producto_existente.jsp");
+			if (productos.get(0).getStock() - stock < 0){
+				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_usuario_no_existente.jsp");
+			}
+			else {
+				productos.get(0).setStock(productos.get(0).getStock() - stock);
+				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_reducir.jsp");
+			}	
 		}
 		else {
-			pm.makePersistent(per);
-			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_registro.jsp");
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_usuario_no_existente.jsp");
 		}
 		pm.close();
 		try {

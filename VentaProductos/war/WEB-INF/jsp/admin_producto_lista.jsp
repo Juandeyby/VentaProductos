@@ -3,7 +3,7 @@
 <%@ page import="jdeyby.*"%>
 <%@ page import="java.util.*;"%>
 <%
-	List<Persona> personas = (List<Persona>) request.getAttribute("personas");
+	List<Producto> productos = (List<Producto>) request.getAttribute("productos");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -16,22 +16,24 @@
 </head>
 <body>
 	<div class="sub_principal">
-		<div class="sub_titulo">✠ LISTA DE USUARIOS</div>
+		<div class="sub_titulo">✠ LISTA DE PRODUCTOS</div>
 		<div id="contenido">
-		<div id="cabezera">Usuario | Nombres | Apellidos | DNI</div>
+		<div id="cabezera">Codigo | Nombre | Precio Unit. Compra | Precio Unit. Venta | Stock </div>
 			<ul>
 			<%
-			if (personas.size() != 0) {
-				for(Persona p: personas) {
+			if (productos.size() != 0) {
+				for(Producto p: productos) {
 			%>
 					<div class="label">
-					<li><% out.println(p.getUsuario() + "\t|" + p.getNombres() + "\t|" + p.getApellidos() + "\t|" + p.getDni() + "|"); %></li>
+					<li><% out.println(p.getCodigo() + "\t|" + p.getNombre() + "\t|" +
+					p.getPrecio_unitario_compra() + "\t|" + p.getPrecio_unitario_venta() + "\t|" +
+					p.getStock() + "|"); %></li>
 					</div>
 			<%					
 				}
 			} else {
 				%>
-				<div class="label">NO EXISTE USUARIOS</div>
+				<div class="label">NO EXISTE PRODUCTOS</div>
 			<%						
 			}
 			%>

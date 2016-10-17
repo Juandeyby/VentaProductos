@@ -16,17 +16,17 @@ public class Producto {
 	private String nombre;
 	
 	@Persistent
-	private String precio_unitario_compra;
+	private Double precio_unitario_compra;
 	
 	@Persistent
-	private String precio_unitario_venta;
+	private Double precio_unitario_venta;
 	
 	@Persistent
-	private String stock;
+	private int stock;
 
 	public Producto(String codigo, String nombre,
-			String precio_unitario_compra, String precio_unitario_venta,
-			String stock) {
+			Double precio_unitario_compra, Double precio_unitario_venta,
+			int stock) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -51,27 +51,27 @@ public class Producto {
 		this.nombre = nombre;
 	}
 
-	public String getPrecio_unitario_compra() {
+	public Double getPrecio_unitario_compra() {
 		return precio_unitario_compra;
 	}
 
-	public void setPrecio_unitario_compra(String precio_unitario_compra) {
+	public void setPrecio_unitario_compra(Double precio_unitario_compra) {
 		this.precio_unitario_compra = precio_unitario_compra;
 	}
 
-	public String getPrecio_unitario_venta() {
+	public Double getPrecio_unitario_venta() {
 		return precio_unitario_venta;
 	}
 
-	public void setPrecio_unitario_venta(String precio_unitario_venta) {
+	public void setPrecio_unitario_venta(Double precio_unitario_venta) {
 		this.precio_unitario_venta = precio_unitario_venta;
 	}
 
-	public String getStock() {
+	public int getStock() {
 		return stock;
 	}
 
-	public void setStock(String stock) {
+	public void setStock(int stock) {
 		this.stock = stock;
 	}
 

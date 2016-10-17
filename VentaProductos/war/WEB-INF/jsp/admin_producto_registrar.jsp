@@ -12,7 +12,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ REGISTRAR PRODUCTO</div>
-		<div id="registrar_producto">
+		<div id="contenido">
 			<div class="label">CODIGO</div>
 			<input class="caja" name="codigo" type="text">
 			<div class="label">NOMBRE</div>

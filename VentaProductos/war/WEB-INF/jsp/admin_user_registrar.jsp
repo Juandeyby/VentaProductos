@@ -12,7 +12,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ REGISTRAR USUARIO</div>
-		<div id="registrar_usuario">
+		<div id="contenido">
 			<div class="label">NOMBRES</div>
 			<input class="caja" name="nombres" type="text">
 			<div class="label">APELLIDOS</div>
