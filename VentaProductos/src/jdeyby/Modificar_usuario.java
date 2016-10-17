@@ -10,32 +10,27 @@ import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 
 @SuppressWarnings("serial")
-public class Registrar_usuario extends HttpServlet {
+public class Modificar_usuario extends HttpServlet {
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
 		RequestDispatcher redirigir;
-		String nombres = req.getParameter("nombres");
-		String apellidos = req.getParameter("apellidos");
-		String dni = req.getParameter("dni");
 		String usuario = req.getParameter("usuario");
 		String contrasena = req.getParameter("contrasena");
 		
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		Query q = pm.newQuery(Persona.class);
-		
-		Persona per = new Persona(usuario, contrasena, nombres, apellidos, dni, false);
-		System.out.println(per);
+
 		q.setFilter("usuario == usuarioParam");
 		q.declareParameters("String usuarioParam");
 		
 		List<Persona> personas = (List<Persona>) q.execute(usuario);
 		if(personas.size() != 0){
-			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_usuario_existente.jsp");
+			personas.get(0).setContrasena(contrasena);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_cambio.jsp");
 		}
 		else {
-			pm.makePersistent(per);
-			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_registro.jsp");
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_usuario_no_existente.jsp");
 		}
 		pm.close();
 		try {

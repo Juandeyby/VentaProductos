@@ -49,6 +49,42 @@ $(document).ready(function() {
 				usuario : $('input:text[name=usuario]').val(),
 				contrasena : $('input:password[name=contrasena]').val()
 			},
+			beforeSend: function() {
+			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
+	$('#modificar_usuario_accion').click(function() {
+		$.ajax({
+			type: 'post',
+			url : 'modificar_usuario',
+			data : {
+				usuario : $('input:text[name=usuario]').val(),
+				contrasena : $('input:password[name=contrasena]').val()
+			},
+			beforeSend: function() {
+			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
+	$('#borrar_usuario_accion').click(function() {
+		$.ajax({
+			type: 'post',
+			url : 'borrar_usuario',
+			data : {
+				usuario : $('input:text[name=usuario]').val(),
+			},
+			beforeSend: function() {
+			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');
+			},
 			success : function(responseText) {
 				$('#principal').html(responseText);
 			}

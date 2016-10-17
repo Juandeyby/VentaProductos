@@ -13,16 +13,12 @@
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ MODIFICAR USUARIO</div>
 		<div id="modificar_usuario">
-			<div class="label">DNI</div>
-			<input class="caja" id="dni" type="number">
+			<div class="label">USUARIO *requerido</div>
+			<input class="caja" name="usuario" type="text">
 			<div class="label">---------------------------------------</div>
-			<div class="label">NOMBRES</div>
-			<input class="caja" id="nombres" type="text">
-			<div class="label">APELLIDOS</div>
-			<input class="caja" id="apellidos" type="text">
 			<div class="label">CONTRASEÑA</div>
-			<input class="caja" id="contrasena" type="password"><br>
-			<button id="modificar_usuario_accion">MODIFICAR USUARIO</button>
+			<input class="caja" name="contrasena" type="password"><br>
+			<div id="modificar_usuario_accion">MODIFICAR USUARIO</div>
 		</div>
 	</div>
 </body>

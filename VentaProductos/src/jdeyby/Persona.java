@@ -9,6 +9,7 @@ import javax.jdo.annotations.PrimaryKey;
 public class Persona {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	
 	private String usuario;
 	
 	@Persistent
