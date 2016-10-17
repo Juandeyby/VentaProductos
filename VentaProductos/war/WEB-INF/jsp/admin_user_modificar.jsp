@@ -12,13 +12,13 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ MODIFICAR USUARIO</div>
-		<div id="contenido">
+		<div class="contenido">
 			<div class="label">USUARIO *requerido</div>
 			<input class="caja" name="usuario" type="text">
 			<div class="label">---------------------------------------</div>
 			<div class="label">NUEVA CONTRASEÑA</div>
 			<input class="caja" name="contrasena" type="password"><br>
-			<div id="modificar_usuario_accion">MODIFICAR USUARIO</div>
+			<div class="boton" id="modificar_usuario_accion">MODIFICAR USUARIO</div>
 		</div>
 	</div>
 </body>

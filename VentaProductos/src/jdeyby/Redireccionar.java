@@ -20,6 +20,11 @@ public class Redireccionar extends HttpServlet {
 		String redireccionar = req.getParameter("redireccionar");
 		
 		switch (redireccionar) {
+		
+		case "admin_admin_modificar":
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_admin_modificar.jsp");
+			break;
+		
 		case "admin_user_registrar":
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_user_registrar.jsp");
 			break;

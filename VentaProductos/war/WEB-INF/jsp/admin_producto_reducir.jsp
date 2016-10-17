@@ -12,13 +12,13 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ REDUCIR STOCK DE PRODUCTOS</div>
-		<div id="contenido">
+		<div class="contenido">
 			<div class="label">CODIGO *requerido</div>
 			<input class="caja" name="codigo" type="text">
 			<div class="label">---------------------------------------</div>
 			<div class="label">REDUCIR EN</div>
 			<input class="caja" name="stock" type="text"><br>
-			<div id="reducir_producto_accion">REDUCIR CANTIDAD</div>
+			<div class="boton" id="reducir_producto_accion">REDUCIR CANTIDAD</div>
 		</div>
 	</div>
 </body>

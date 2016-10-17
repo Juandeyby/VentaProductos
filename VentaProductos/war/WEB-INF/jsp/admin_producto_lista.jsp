@@ -17,7 +17,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ LISTA DE PRODUCTOS</div>
-		<div id="contenido">
+		<div class="contenido">
 		<div id="cabezera">Codigo | Nombre | Precio Unit. Compra | Precio Unit. Venta | Stock </div>
 			<ul>
 			<%

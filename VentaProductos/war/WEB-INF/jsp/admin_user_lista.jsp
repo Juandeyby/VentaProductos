@@ -17,7 +17,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ LISTA DE USUARIOS</div>
-		<div id="contenido">
+		<div class="contenido">
 		<div id="cabezera">Usuario | Nombres | Apellidos | DNI</div>
 			<ul>
 			<%

@@ -3,6 +3,19 @@
  */
 
 $(document).ready(function() {
+	
+	$('#admin_admin_modificar').click(function() {
+		$.ajax({
+			url : 'redireccionar',
+			data : {
+				redireccionar : 'admin_admin_modificar'
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
 	$('#admin_user_registrar').click(function() {
 		$.ajax({
 			url : 'redireccionar',
@@ -224,6 +237,24 @@ $(document).ready(function() {
 			data : {
 				codigo : $('input:text[name=codigo]').val(),
 				stock : $('input:text[name=stock]').val()
+			},
+			beforeSend: function() {
+			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
+	$('#modificar_admin_accion').click(function() {
+		$.ajax({
+			type: 'post',
+			url : 'login',
+			data : {
+				cambio : 'true',
+				contrasena1 : $('input:password[name=contrasena1]').val(),
+				contrasena2 : $('input:password[name=contrasena2]').val()
 			},
 			beforeSend: function() {
 			    $('#principal').html('<img id="cargar" alt="cargar" src="image/cargar.gif">');

@@ -18,7 +18,7 @@
 			<div class="label">---------------------------------------</div>
 			<div class="label">AUMENTAR EN</div>
 			<input class="caja" name="stock" type="text"><br>
-			<div id="aumentar_producto_accion">AUMENTAR CANTIDAD</div>
+			<div class="boton" id="aumentar_producto_accion">AUMENTAR CANTIDAD</div>
 		</div>
 	</div>
 </body>

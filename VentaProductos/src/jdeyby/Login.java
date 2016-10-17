@@ -8,17 +8,28 @@ import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
 public class Login extends HttpServlet {
+	String contrasenabase = "admin";
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
 		
 		RequestDispatcher redirigir;
-		String usuario = req.getParameter("usuario");
-		String contrasena = req.getParameter("contrasena");
-		
-		if (usuario.equals("admin") && contrasena.equals("admin")) {
-			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/pag_admin.jsp");
+		if(req.getParameter("cambio") != null && req.getParameter("cambio").equals("true")) {
+			if(req.getParameter("contrasena1").equals(contrasenabase)) {
+				contrasenabase = req.getParameter("contrasena2");
+				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito.jsp");
+			}
+			else {
+				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error.jsp");
+			}
 		} else {
-			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/index.jsp");
+			String usuario = req.getParameter("usuario");
+			String contrasena = req.getParameter("contrasena");
+			
+			if (usuario.equals("admin") && contrasena.equals(contrasenabase)) {
+				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/pag_admin.jsp");
+			} else {
+				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/index.jsp");
+			}
 		}
 		redirigir.forward(req, resp);
 		

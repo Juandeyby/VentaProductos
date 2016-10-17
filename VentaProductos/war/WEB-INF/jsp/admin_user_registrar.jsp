@@ -12,7 +12,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ REGISTRAR USUARIO</div>
-		<div id="contenido">
+		<div class="contenido">
 			<div class="label">NOMBRES</div>
 			<input class="caja" name="nombres" type="text">
 			<div class="label">APELLIDOS</div>
@@ -23,7 +23,7 @@
 			<input class="caja" name="usuario" type="text">
 			<div class="label">CONTRASEÑA</div>
 			<input class="caja" name="contrasena" type="password"></br>
-			<div id="registrar_usuario_accion">REGISTRAR USUARIO</div>
+			<div class="boton" id="registrar_usuario_accion">REGISTRAR USUARIO</div>
 		</div>
 	</div>
 </body>

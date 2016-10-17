@@ -10,6 +10,7 @@ body {
 .sub_principal {
     width : 800px;
     height : 500px;
+    overflow: scroll;
 }
 
 .sub_titulo {
@@ -41,7 +42,7 @@ body {
 	margin-bottom : 10px;
 }
 
-#registrar_usuario_accion, #modificar_usuario_accion, #borrar_usuario_accion {
+.boton {
 	border : 5px;
 	width : 250px;
 	size : 200 px;
@@ -51,7 +52,7 @@ body {
 	background-color: #2a779e;
 }
 
-#registrar_usuario_accion:hover, #modificar_usuario_accion:hover, #borrar_usuario_accion:hover {
+.boton:hover {
 	cursor : default;
     background-color: #44b2ea;
     color : #0b4687;

@@ -12,7 +12,7 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ REGISTRAR PRODUCTO</div>
-		<div id="contenido">
+		<div class="contenido">
 			<div class="label">CODIGO</div>
 			<input class="caja" name="codigo" type="text">
 			<div class="label">NOMBRE</div>
@@ -23,7 +23,7 @@
 			<input class="caja" name="precio_unitario_venta" type="text">
 			<div class="label">STOCK INICIAL</div>
 			<input class="caja" name="stock" type="text"></br>
-			<div id="registrar_producto_accion">REGISTRAR PRODUCTO</div>
+			<div class="boton" id="registrar_producto_accion">REGISTRAR PRODUCTO</div>
 		</div>
 	</div>
 </body>

@@ -4,18 +4,21 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Borrar</title>
+    <title>Modificar</title>
     <link rel="stylesheet" type="text/css" href="/css/third.css">
     <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/js/first.js"></script>
 </head>
 <body>
 	<div class="sub_principal">
-		<div class="sub_titulo">✠ BORRAR PRODUCTO</div>
+		<div class="sub_titulo">✠ MODIFICAR CONTRASEÑA</div>
 		<div class="contenido">
-			<div class="label">CODIGO DEL PRODUCTO *requerido</div>
-			<input class="caja" name="codigo" type="text"><br>
-			<div class="boton" id="borrar_producto_accion">BORRAR PRODUCTO</div>
+			<div class="label">ANTIGUA CONTRASEÑA *requerido</div>
+			<input class="caja" name="contrasena1" type="password">
+			<div class="label">---------------------------------------</div>
+			<div class="label">NUEVA CONTRASEÑA</div>
+			<input class="caja" name="contrasena2" type="password"><br>
+			<div class="boton" id="modificar_admin_accion">CAMBIAR CONTRASEÑA</div>
 		</div>
 	</div>
 </body>
