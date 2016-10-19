@@ -10,27 +10,29 @@
     <script type="text/javascript" src="/js/first.js"></script>
 </head>
 <body>
-	<div id="pag">
-		<div id="menu">
-			<div class="sub_menu">✠ ADMINISTRADOR</div>
-			<div class="sub_sub_menu" id="admin_admin_modificar">- MODIFICAR</div>
-			<div class="sub_menu">✠ USUARIO</div>
-			<div class="sub_sub_menu" id="admin_user_registrar">- REGISTRAR</div>
-			<div class="sub_sub_menu" id="admin_user_lista">- LISTA</div>
-			<div class="sub_sub_menu" id="admin_user_modificar">- MODIFICAR</div>
-			<div class="sub_sub_menu" id="admin_user_borrar">- BORRAR</div>
-			<div class="sub_menu">✠ PRODUCTO</div>
-			<div class="sub_sub_menu" id="admin_producto_registrar">- REGISTRAR</div>
-			<div class="sub_sub_menu" id="admin_producto_lista">- LISTA</div>
-			<div class="sub_sub_menu" id="admin_producto_borrar">- BORRAR</div>
-			<div class="sub_sub_menu" id="admin_producto_aumentar">- AUMENTAR STOCK</div>
-			<div class="sub_sub_menu" id="admin_producto_reducir">- REDUCIR STOCK</div>
-			<div class="sub_menu">✠ VENTAS</div>
-			<div class="sub_sub_menu">- HISTORIAL</div>
-			<div id="cerrar">CERRAR SESIÓN</div>
-		</div>
-		<div id="principal">
-			<div id="bienvenido">✠ BIENVENIDO ADMINISTRADOR ... 20%</div>
+	<div id="supersuper">
+		<div id="pag">
+			<div id="menu">
+				<div class="sub_menu">✠ ADMINISTRADOR</div>
+				<div class="sub_sub_menu" id="admin_admin_modificar">- MODIFICAR</div>
+				<div class="sub_menu">✠ USUARIO</div>
+				<div class="sub_sub_menu" id="admin_user_registrar">- REGISTRAR</div>
+				<div class="sub_sub_menu" id="admin_user_lista">- LISTA</div>
+				<div class="sub_sub_menu" id="admin_user_modificar">- MODIFICAR</div>
+				<div class="sub_sub_menu" id="admin_user_borrar">- BORRAR</div>
+				<div class="sub_menu">✠ PRODUCTO</div>
+				<div class="sub_sub_menu" id="admin_producto_registrar">- REGISTRAR</div>
+				<div class="sub_sub_menu" id="admin_producto_lista">- LISTA</div>
+				<div class="sub_sub_menu" id="admin_producto_borrar">- BORRAR</div>
+				<div class="sub_sub_menu" id="admin_producto_aumentar">- AUMENTAR STOCK</div>
+				<div class="sub_sub_menu" id="admin_producto_reducir">- REDUCIR STOCK</div>
+				<div class="sub_menu">✠ VENTAS</div>
+				<div class="sub_sub_menu">- HISTORIAL</div>
+				<div id="cerrar">CERRAR SESIÓN</div>
+			</div>
+			<div id="principal">
+				<div id="bienvenido">✠ BIENVENIDO ✠</div>
+			</div>
 		</div>
 	</div>
 </body>

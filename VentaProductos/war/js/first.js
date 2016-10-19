@@ -4,6 +4,18 @@
 
 $(document).ready(function() {
 	
+	$('#cerrar').click(function() {
+		$.ajax({
+			url : 'redireccionar',
+			data : {
+				redireccionar : 'cerrar'
+			},
+			success : function(responseText) {
+				$('#supersuper').html(responseText);
+			}
+		});
+	});
+	
 	$('#admin_admin_modificar').click(function() {
 		$.ajax({
 			url : 'redireccionar',

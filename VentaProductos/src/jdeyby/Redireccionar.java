@@ -11,6 +11,9 @@ import javax.servlet.http.*;
 
 @SuppressWarnings("serial")
 public class Redireccionar extends HttpServlet {
+	
+	static Double caja = 0.0;
+	
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
 		
@@ -67,6 +70,29 @@ public class Redireccionar extends HttpServlet {
 			
 		case "admin_producto_reducir":
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_producto_reducir.jsp");
+			break;
+			
+		case "usuario_caja_ver":
+			req.setAttribute("caja", caja);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/usuario_caja_ver.jsp");
+			break;
+			
+		case "usuario_stock_ver":
+			Query q3 = pm.newQuery(Producto.class);
+			@SuppressWarnings("unchecked")
+			List<Producto> productos1 = (List<Producto>) q3.execute();
+			req.setAttribute("productos", productos1);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/usuario_stock_ver.jsp");
+			break;
+			
+		case "usuario_venta":
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/usuario_venta.jsp");
+			break;
+			
+		case "cerrar":
+			sesion = req.getSession(false);
+	        sesion.setAttribute("email", null);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/index.jsp");
 			break;
 			
 		default:

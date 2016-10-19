@@ -5,6 +5,14 @@ xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
+		<servlet-name>Usuario_venta</servlet-name>
+		<servlet-class>jdeyby.Usuario_venta</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Usuario_venta</servlet-name>
+		<url-pattern>/usuario_venta</url-pattern>
+	</servlet-mapping>
+	<servlet>
 		<servlet-name>Aumentar_producto</servlet-name>
 		<servlet-class>jdeyby.Aumentar_producto</servlet-class>
 	</servlet>

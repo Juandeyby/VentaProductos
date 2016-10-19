@@ -32,16 +32,16 @@ public class Registrar_usuario extends HttpServlet {
 		q.declareParameters("String usuarioParam");
 		
 		List<Persona> personas = (List<Persona>) q.execute(usuario);
-		if(personas != null || personas.size() != 0){
+		if(personas.size() != 0){
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error_usuario_existente.jsp");
 		}
 		else {
 			pm.makePersistent(per);
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito_registro.jsp");
 		}
-		pm.close();
 		try {
 			redirigir.forward(req, resp);
+			pm.close();
 		} catch (ServletException e) {
 			e.printStackTrace();
 		}
