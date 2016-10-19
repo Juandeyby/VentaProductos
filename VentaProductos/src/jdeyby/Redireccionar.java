@@ -89,6 +89,14 @@ public class Redireccionar extends HttpServlet {
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/usuario_venta.jsp");
 			break;
 			
+		case "admin_historial":
+			Query q4 = pm.newQuery(Venta.class);
+			@SuppressWarnings("unchecked")
+			List<Venta> ventas = (List<Venta>) q4.execute();
+			req.setAttribute("ventas", ventas);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_historial.jsp");
+			break;
+			
 		case "cerrar":
 			sesion = req.getSession(false);
 	        sesion.setAttribute("email", null);

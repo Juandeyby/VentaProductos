@@ -17,7 +17,9 @@ public class Usuario_venta extends HttpServlet {
 		RequestDispatcher redirigir = null;
 		
 		String codigo = req.getParameter("codigo");
-		int cantidad = Integer.parseInt(req.getParameter("cantidad"));
+		String cantidadString = req.getParameter("cantidad");
+		System.out.println(cantidadString);
+		int cantidad = Integer.parseInt(cantidadString);
 		
 		
 		HttpSession session = req.getSession();
@@ -30,15 +32,16 @@ public class Usuario_venta extends HttpServlet {
 		List<Producto> productos = (List<Producto>) q.execute(codigo);
 		if (productos.size() != 0) {
 			productos.get(0).setStock(productos.get(0).getStock() - cantidad);
-
+			Redireccionar.caja = Redireccionar.caja +  productos.get(0).getPrecio_unitario_venta()*cantidad;
 			Venta ven = new Venta((String) session.getAttribute("session"), productos.get(0).getNombre(),
 					productos.get(0).getCodigo(), cantidad);
 			System.out.println(ven.toString());
 			pm.makePersistent(ven);
 			pm.close();
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/exito.jsp");
+		} else {
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error.jsp");
 		}
-		redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/error.jsp");
 		try {
 			redirigir.forward(req, resp);
 		} catch (ServletException e) {

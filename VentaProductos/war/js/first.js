@@ -136,6 +136,18 @@ $(document).ready(function() {
 		});
 	});
 	
+	$('#admin_historial').click(function() {
+		$.ajax({
+			url : 'redireccionar',
+			data : {
+				redireccionar : 'admin_historial'
+			},
+			success : function(responseText) {
+				$('#principal').html(responseText);
+			}
+		});
+	});
+	
 	$('#registrar_usuario_accion').click(function() {
 		$.ajax({
 			type: 'post',
