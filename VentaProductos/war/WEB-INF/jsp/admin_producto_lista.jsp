@@ -17,19 +17,26 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ LISTA DE PRODUCTOS</div>
-		<div class="contenido">
-		<div id="cabezera">Codigo | Nombre | Precio Unit. Compra | Precio Unit. Venta | Stock </div>
-			<ul>
+		<div id="contenedor">
+			<div class="contenidos">
+        		<div class="columna">Codigo</div>
+        		<div class="columna">Nombre</div>
+        		<div class="columna">Precio Unit. Compra</div>
+        		<div class="columna">Precio Unit. Venta</div>
+        		<div class="columna">Stock</div>
+    		</div>
 			<%
 			if (productos.size() != 0) {
 				for(Producto p: productos) {
 			%>
-					<div class="label">
-					<li><% out.println(p.getCodigo() + "\t|" + p.getNombre() + "\t|" +
-					p.getPrecio_unitario_compra() + "\t|" + p.getPrecio_unitario_venta() + "\t|" +
-					p.getStock() + "|"); %></li>
-					</div>
-			<%					
+		    <div class="contenidos">
+        		<div class="columna"><% out.println(p.getCodigo());%></div>
+        		<div class="columna"><% out.println(p.getNombre());%></div>
+        		<div class="columna"><% out.println(p.getPrecio_unitario_compra());%></div>
+        		<div class="columna"><% out.println(p.getPrecio_unitario_venta());%></div>
+        		<div class="columna"><% out.println(p.getStock());%></div>
+    		</div>
+    		<%					
 				}
 			} else {
 				%>
@@ -37,7 +44,6 @@
 			<%						
 			}
 			%>
-			</ul>
 		</div>
 	</div>
 </body>

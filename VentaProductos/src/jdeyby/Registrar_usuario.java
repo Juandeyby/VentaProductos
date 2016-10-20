@@ -27,7 +27,7 @@ public class Registrar_usuario extends HttpServlet {
 		Query q = pm.newQuery(Persona.class);
 		
 		Persona per = new Persona(usuario, contrasena, nombres, apellidos, dni, false);
-		System.out.println(per);
+		
 		q.setFilter("usuario == usuarioParam");
 		q.declareParameters("String usuarioParam");
 		

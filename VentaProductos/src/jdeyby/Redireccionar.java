@@ -1,6 +1,8 @@
 package jdeyby;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -14,6 +16,7 @@ public class Redireccionar extends HttpServlet {
 	
 	static Double caja = 0.0;
 	
+	@SuppressWarnings("deprecation")
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
 		
@@ -73,7 +76,7 @@ public class Redireccionar extends HttpServlet {
 			break;
 			
 		case "usuario_caja_ver":
-			req.setAttribute("caja", caja);
+			req.setAttribute("caja", Math.rint(caja*100)/100);
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/usuario_caja_ver.jsp");
 			break;
 			
@@ -95,6 +98,23 @@ public class Redireccionar extends HttpServlet {
 			List<Venta> ventas = (List<Venta>) q4.execute();
 			req.setAttribute("ventas", ventas);
 			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_historial.jsp");
+			break;
+			
+		case "admin_historial_hoy":
+			Query q5 = pm.newQuery(Venta.class);
+			@SuppressWarnings("unchecked")
+			List<Venta> ventas1 = (List<Venta>) q5.execute();
+			List<Venta> ventasactual = new ArrayList<Venta>();
+			Date hoy = new Date();
+			for (int i = 0; i < ventas1.size(); i++) {
+				if (ventas1.get(i).getFecha().getDay() == hoy.getDay()
+						&& ventas1.get(i).getFecha().getMonth() == hoy.getMonth()
+						&& ventas1.get(i).getFecha().getYear() == hoy.getYear()) {
+					ventasactual.add(ventas1.get(i));
+				}
+			}
+			req.setAttribute("ventas", ventasactual);
+			redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/admin_historial_hoy.jsp");
 			break;
 			
 		case "cerrar":

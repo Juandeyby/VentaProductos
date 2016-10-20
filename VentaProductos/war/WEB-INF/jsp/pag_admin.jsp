@@ -28,6 +28,7 @@
 				<div class="sub_sub_menu" id="admin_producto_reducir">- REDUCIR STOCK</div>
 				<div class="sub_menu">✠ VENTAS</div>
 				<div class="sub_sub_menu" id="admin_historial">- HISTORIAL</div>
+				<div class="sub_sub_menu" id="admin_historial_hoy">- HISTORIAL HOY</div>
 				<div id="cerrar">CERRAR SESIÓN</div>
 			</div>
 			<div id="principal">

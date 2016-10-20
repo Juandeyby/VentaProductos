@@ -17,17 +17,24 @@
 <body>
 	<div class="sub_principal">
 		<div class="sub_titulo">✠ LISTA DE USUARIOS</div>
-		<div class="contenido">
-		<div id="cabezera">Usuario | Nombres | Apellidos | DNI</div>
-			<ul>
+		<div id="contenedor">
+			<div class="contenidos">
+        		<div class="columna">Usuario</div>
+        		<div class="columna">Nombres</div>
+        		<div class="columna">Apellidos</div>
+        		<div class="columna">DNI</div>
+    		</div>
 			<%
 			if (personas.size() != 0) {
 				for(Persona p: personas) {
 			%>
-					<div class="label">
-					<li><% out.println(p.getUsuario() + "\t|" + p.getNombres() + "\t|" + p.getApellidos() + "\t|" + p.getDni() + "|"); %></li>
-					</div>
-			<%					
+		    <div class="contenidos">
+        		<div class="columna"><% out.println(p.getUsuario());%></div>
+        		<div class="columna"><% out.println(p.getNombres());%></div>
+        		<div class="columna"><% out.println(p.getApellidos());%></div>
+        		<div class="columna"><% out.println(p.getDni());%></div>
+    		</div>
+    		<%					
 				}
 			} else {
 				%>
@@ -35,7 +42,6 @@
 			<%						
 			}
 			%>
-			</ul>
 		</div>
 	</div>
 </body>

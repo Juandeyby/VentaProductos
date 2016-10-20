@@ -31,19 +31,20 @@ public class Login extends HttpServlet {
 			
 			PersistenceManager pm = PMF.get().getPersistenceManager();
 			Query q = pm.newQuery(Persona.class);
-
-			q.setFilter("usuario == usuarioParam");
-			q.declareParameters("String usuarioParam");
-			List<Persona> personas = (List<Persona>) q.execute(usuario);
 			
 			if (usuario.equals("admin") && contrasena.equals(contrasenabase)) {
 				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/pag_admin.jsp");
-			} else if (personas.size() != 0) {
-				HttpSession session = req.getSession();
-				session.setAttribute("session", personas.get(0).getUsuario());
-				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/pag_usuario.jsp");
 			} else {
+				q.setFilter("usuario == usuarioParam");
+				q.declareParameters("String usuarioParam");
+				List<Persona> personas = (List<Persona>) q.execute(usuario);
+				if (personas.size() != 0) {
+					HttpSession session = req.getSession();
+					session.setAttribute("session", personas.get(0).getUsuario());
+					redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/pag_usuario.jsp");
+				} else {
 				redirigir = getServletContext().getRequestDispatcher("/WEB-INF/jsp/index.jsp");
+				}
 			}
 		}
 		redirigir.forward(req, resp);
